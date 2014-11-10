@@ -1,0 +1,37 @@
+<link rel="import" href="../components/core-ajax/core-ajax.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+<link rel="import" href="../components/paper-button/paper-button.html">
+
+<polymer-element name="test-delete">
+	<template>
+		<style>
+		#button {
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: darkslategray;
+			color: #efefef;
+		}
+
+		</style>
+		<form id="form_1">
+	      <paper-input floatingLabel id="Id" label="Id account to delete:" value="{{id}}"></paper-input>
+	      <br>
+	 
+	      <div class="centered">
+	        <paper-button id="button" on-click="{{doSend}}" raisedButton class="colored" label="Delete"></paper-button>
+	      </div>
+	    </form>
+
+	  	<core-ajax id="ajax" auto="false" method="DELETE" contentType="application/json"  url="/api/accounts/{{ id }}">
+    </core-ajax>
+  </template>
+  <script>
+    Polymer('test-delete', {
+
+      doSend: function(event, response){
+        var id = this.$.Id.value;
+        this.$.ajax.go();
+      }
+    });
+  </script>
+</polymer-element>
