@@ -6,7 +6,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongo"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -25,11 +25,23 @@
     "public": false
   },
   "Person": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": true
   },
   "account": {
-    "dataSource": "accountDB",
+    "dataSource": "mongo",
+    "public": true
+  },
+  "employee": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "project": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "post": {
+    "dataSource": "mongo",
     "public": true
   }
 }

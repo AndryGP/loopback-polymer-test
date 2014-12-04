@@ -1,5 +1,14 @@
 {
+  "name": "test",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.4.0"
+    "polymer": "Polymer/polymer#^0.4.0",
+    "paper-item": "Polymer/paper-item",
+    "core-ajax": "Polymer/core-ajax",
+    "paper-input": "Polymer/paper-input",
+    "paper-button": "Polymer/paper-button",
+    "paper-dropdown-menu": "Polymer/paper-dropdown-menu",
+    "core-menu": "Polymer/core-menu",
+    "moment": "~2.8.3",
+    "query-string": "~1.0.0"
   }
 }

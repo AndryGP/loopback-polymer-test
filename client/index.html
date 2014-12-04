@@ -1,54 +1,37 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <script src="components/platform/platform.js"></script>
-	<link rel="import" href="elements/test-list.html">
-	<link rel="import" href="elements/test-insert.html">
-	<link rel="import" href="elements/test-delete.html">
-	<link rel="import" href="elements/test-update.html">
+  <title>X-Project</title>
+  <link rel="import" href="/bower_components/polymer/polymer.html">
+  <link rel="import" href="/bower_components/x-link/x-link.html">
+  <link rel="import" href="/elements/page-form/page-form.html">
+  <link rel="import" href="/elements/page-login/page-login.html">
+  <link rel="import" href="/elements/page-blog/page-blog.html">
+  <link rel="import" href="/elements/page-post/page-post.html">
+  <link rel="import" href="/elements/page-item-list/page-item-list.html">
+  <link rel="import" href="/elements/page-schema-list/page-schema-list.html">
+  <link rel="stylesheet" type="text/css" href="/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
 
-
-  	<title>Loopback-Polymer Test</title>
-  	<style>
-  		h2 {
-  			text-align: center;
-  			font-variant: small-caps;
-  			color: darkslategray;
-  			letter-spacing: 0.5px;
-			font-family: sans-serif;
-
-
-  		}
-  		h3 {
-  			font-variant: small-caps;
-  			color: darkslategray;
-  			font-size: 20px;
-  			font-style: italic;
-  			font-family: sans-serif;
-  			font-weight: bold;
-  			letter-spacing: 0.5px;
-  			margin-top: 40px;
-
-
-  		}
-  		body {
-  			background-color: #efefef;
-  			margin: 30px;
-
-  		}
-  	</style>
 </head>
-<body>
-<h2>Loopback-Polymer Test</h2>
-<h3>Test Get</h3>
-<test-list></test-list>
-<h3>Test Insert</h3>
-<test-insert></test-insert>
-<h3>Test Delete</h3>
-<test-delete></test-delete>
-<h3>Test Update</h3>
-<test-update></test-update>
+<body unresolved>
+  <div id="app">
+    <div id="welcome">
+      <h1 id="brand">WELCOME TO X-PROJECT</h1>
+      <button id="admin" onclick="on_submit_admin()">ADMIN</button>
+      <button id="blog" onclick="on_submit_blog()">BLOG</button>
+    </div>
+  </div>
+  <script src="/bower_components/page/page.js"></script>
+  <script src="/index.js"></script>
+  <script type="text/javascript">
 
+  function on_submit_admin() {
+    page("/login");
+  };
 
+  function on_submit_blog() {
+    page("/blog");
+  };
+  </script>
 </body>
 </html>

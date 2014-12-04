@@ -1,0 +1,25 @@
+#welcome {
+  background-image: url('../images/x-proj.jpg');
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+#brand {
+  text-shadow: 4px 3px 6px #fff;
+}
+
+#admin {
+  background-color: #FCFCFC;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+#blog {
+  background-color: #FCFCFC;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+}

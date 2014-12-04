@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="x-post">
+  <template>
+    <style>
+
+    </style>
+
+    <div>
+      <h1>{{ data.title }}</h1>
+      <h2>by {{ data.author }}</h2>
+      <h3>{{ data.posted | datetime }}</h3>
+      <p>{{ data.content }}</p>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+
+      datetime: function (value) {
+        return value;
+      }
+
+    });
+  </script>
+</polymer-element>

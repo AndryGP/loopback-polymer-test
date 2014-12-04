@@ -1,0 +1,36 @@
+{
+  "name": "post",
+  "plural": "posts",
+  "base": "PersistedModel",
+  "properties": {
+    "title": {
+      "type": "string",
+      "$type": "string",
+      "required": true
+    },
+    "posted": {
+      "type": "date",
+      "$type": "date",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "$type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "$type": "textarea",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "$type": "textarea",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

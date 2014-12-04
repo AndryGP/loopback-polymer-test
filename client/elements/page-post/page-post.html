@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="x-post.html">
+
+<polymer-element name="page-post" attributes="Id">
+  <template>
+    <core-ajax auto url="/api/posts/{{ Id }}" handleAs="json" on-core-response="{{ on_response }}"></core-ajax>
+
+    <x-post id="post"></x-post>
+
+    <a href="/blog">Back</a>
+  </template>
+
+  <script>
+    Polymer('page-post', {
+
+      Id:"",
+
+      on_response: function(event, res) {
+        this.$.post.data = res.response;
+      }
+
+    });
+  </script>
+</polymer-element>
+
+

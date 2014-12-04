@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-url" >
+	<template>
+
+    <style>
+      :host {
+        display: block;
+      }
+
+    </style>
+
+
+    <span>{{ name }}</span>
+      <input type="url" placeholder="{{ name }}" value="{{ value }}">
+
+  </template>
+
+
+  <script>
+    Polymer('x-url', {
+      label:""
+
+    });
+  </script>
+</polymer-element>

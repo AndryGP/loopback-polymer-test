@@ -1,21 +1,26 @@
 {
   "name": "account",
+  "plural": "accounts",
   "properties": {
     "email": {
       "type": "string",
-      "required": true
+      "required": true,
+      "$type": "email"
     },
-    "level": {
-      "type": "number",
-      "required": true
+    "password": {
+      "type": "string",
+      "required": true,
+      "$type": "password"
     },
     "created": {
       "type": "date",
-      "required": false
+      "required": false,
+      "$type": "date"
     },
     "modified": {
       "type": "date",
-      "required": false
+      "required": false,
+      "$type": "date"
     }
   },
   "validations": [],

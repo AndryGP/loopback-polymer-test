@@ -4,12 +4,19 @@
     "connector": "memory"
   },
   "accountDB": {
-    "name": "accountDB",
-    "connector": "mysql",
     "host": "demo.strongloop.com",
     "port": 3306,
     "database": "demo",
     "username": "demo",
-    "password": "L00pBack"
+    "password": "L00pBack",
+    "name": "accountDB",
+    "connector": "mysql"
+  },
+  "mongo": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "mongo",
+    "name": "mongo",
+    "connector": "mongodb"
   }
 }

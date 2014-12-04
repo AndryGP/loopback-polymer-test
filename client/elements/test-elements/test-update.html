@@ -1,0 +1,59 @@
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<polymer-element name="test-update">
+	<template>
+        <style>
+            #button {
+                font-size: 12px;
+                font-family: sans-serif;
+                background-color: darkslategray;
+                color: #efefef;
+            }
+        </style>
+    <core-ajax id="ajax" auto="false" method="PUT" contentType="application/json"  url="/api/accounts">
+    </core-ajax>
+		<form id="form_1">
+        <paper-input floatingLabel id="id" label="Id account:" value="{{id}}"></paper-input>
+        <br>
+	      <paper-input floatingLabel id="email" label="New email:" value="{{email}}"></paper-input>
+	      <br>
+
+	      <div class="centered">
+	        <paper-button id="button"on-click="{{doSend}}" raisedButton class="colored" label="Update"></paper-button>
+	      </div>
+	    </form>
+
+
+  </template>
+
+  <script src="../bower_components/moment/moment.js"></script>
+
+  <script>
+    Polymer('test-update', {
+
+      doSend: function(event, response){
+        var email = this.$.email.value;
+        var id = this.$.id.value;
+
+        var date = moment().format();
+        var modified = date;
+
+        var data = {
+          email: email,
+          modified: modified,
+          id: id
+        };
+        var body = JSON.stringify(data);
+
+        console.log(data, body);
+
+        var ajax = this.$.ajax;
+        ajax.body = body;
+        ajax.go();
+
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="x-post-preview.html">
+<link rel="stylesheet" type="text/css" href="../../css/blog.css">
+
+<polymer-element name="x-blog" attributes="data">
+  <template>
+    <style>
+      :host {
+        display: block;
+      };
+    </style>
+
+    <div id="blog">
+      <h1>Blog</h1>
+      <template repeat="{{ item in data }}">
+        <x-post-preview item="{{ item }}"></x-post-preview>
+      </template>
+    </div>
+
+    </template>
+
+  <script>
+    Polymer('x-blog', {
+
+    });
+  </script>
+</polymer-element>

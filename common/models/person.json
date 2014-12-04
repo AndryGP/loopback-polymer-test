@@ -2,21 +2,34 @@
   "name": "Person",
   "plural": "People",
   "properties": {
-    "FirstName": {
+    "fullname": {
       "type": "string",
-      "required": true
+      "required": true,
+      "$type": "string"
     },
-    "LastName": {
-      "type": "string",
-      "required": true
-    },
-    "Age": {
+    "age": {
       "type": "number",
-      "required": true
+      "required": true,
+      "$type": "number"
     },
-    "DOB": {
+    "gender": {
+      "type": "string",
+      "required": true,
+      "$type": "enum",
+      "options": [
+        "Male",
+        "Female"
+      ]
+    },
+    "dob": {
       "type": "date",
-      "required": true
+      "required": true,
+      "$type": "date"
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "$type": "email"
     }
   },
   "validations": [],

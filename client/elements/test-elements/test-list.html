@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="test-list">
+  <template>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      #label {
+        font-weight: bold;
+      }
+      #value {
+        font-family: monospace;
+        font-size: 15px;
+      }
+    </style>
+    <content select="h1"></content>
+
+    <core-ajax auto url="/api/accounts" handleAs="json" on-core-response="{{ on_response }}"></core-ajax>
+    <ul>
+      <template repeat="{{account in accounts}}">
+        <li><span id="label">Email:</span> <span id="value">{{account.email}},</span> <span id="label">Created:</span> <span id="value"> {{account.created}}, </span> <span id="label">Modified:</span> <span id="value"> {{account.modified}},</span><span id="label">Level:</span> <span id="value"> {{account.level}},</span> <span id="label">Id:</span> {{account.id}} </li>
+      </template>
+    </ul>
+  </template>
+
+  <script>
+
+  Polymer({
+    on_response: function (event,res) {
+      this.accounts = res.response;
+    }
+
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="x-form.html">
+
+<polymer-element name="page-form" attributes="model Id">
+  <template>
+
+    <x-form model="{{ model }}" Id="{{ Id }}"></x-form>
+
+  </template>
+
+  <script>
+    Polymer('page-form', {
+
+      model: '',
+
+      Id: ''
+
+    });
+  </script>
+</polymer-element>
+
+

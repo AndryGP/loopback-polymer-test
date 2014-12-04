@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/x-link/x-link.html">
+<link rel="import" href="../x-input/x-input.html">
+<link rel="import" href="../x-password/x-password.html">
+
+<polymer-element name="x-login" >
+	<template>
+
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <core-ajax id="login" method="POST" contentType="application/json" url="/api/Users/login" on-core-complete="{{ on_login }}" ></core-ajax>
+
+    <form id="form" on-submit="{{ on_submit }}">
+      Email
+      <x-input id="input"></x-input>
+      Password
+      <x-password id="password"></x-password>
+      <input type="submit" on-click="{{ on_submit }}" value="login" />
+    </form>
+
+  </template>
+  <script>
+    Polymer('x-login', {
+
+      on_submit: function (event) {
+        event.preventDefault();
+        var credentials = {};
+        var input = this.$.input.value;
+        var pw = this.$.password.value;
+        var ttl = "120960000";
+        credentials.email =  input;
+        credentials.password = pw;
+        credentials.ttl = ttl;
+        var body = JSON.stringify(credentials);
+        var login = this.$.login;
+        login.body = body;
+        login.go();
+      },
+
+      on_login: function(event, res) {
+        if (event.detail.response === 200) {
+          page("/models");
+        }
+        if (event.detail.response === 401) {
+          alert("username or password not valid");
+
+        }
+      }
+    });
+  </script>
+</polymer-element>
