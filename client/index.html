@@ -7,31 +7,16 @@
   <link rel="import" href="/elements/page-login/page-login.html">
   <link rel="import" href="/elements/page-blog/page-blog.html">
   <link rel="import" href="/elements/page-post/page-post.html">
+  <link rel="import" href="/elements/page-home/page-home.html">
   <link rel="import" href="/elements/page-item-list/page-item-list.html">
   <link rel="import" href="/elements/page-schema-list/page-schema-list.html">
-  <link rel="stylesheet" type="text/css" href="/css/blog.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
-
 </head>
 <body unresolved>
   <div id="app">
-    <div id="welcome">
-      <h1 id="brand">WELCOME TO X-PROJECT</h1>
-      <button id="admin" onclick="on_submit_admin()">ADMIN</button>
-      <button id="blog" onclick="on_submit_blog()">BLOG</button>
-    </div>
+
   </div>
   <script src="/bower_components/page/page.js"></script>
   <script src="/index.js"></script>
-  <script type="text/javascript">
-
-  function on_submit_admin() {
-    page("/login");
-  };
-
-  function on_submit_blog() {
-    page("/blog");
-  };
-  </script>
 </body>
 </html>

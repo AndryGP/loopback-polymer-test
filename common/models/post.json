@@ -5,28 +5,28 @@
   "properties": {
     "title": {
       "type": "string",
-      "$type": "string",
-      "required": true
+      "required": true,
+      "$type": "string"
     },
     "posted": {
       "type": "date",
-      "$type": "date",
-      "required": true
+      "required": true,
+      "$type": "date"
     },
     "author": {
       "type": "string",
-      "$type": "string",
-      "required": true
+      "required": true,
+      "$type": "string"
     },
     "description": {
       "type": "string",
-      "$type": "textarea",
-      "required": true
+      "required": true,
+      "$type": "textarea"
     },
     "content": {
       "type": "string",
-      "$type": "textarea",
-      "required": true
+      "required": true,
+      "$type": "textarea"
     }
   },
   "validations": [],

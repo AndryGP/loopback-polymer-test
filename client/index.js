@@ -27,7 +27,7 @@ var onchange = function (event) {
 app.addEventListener('click link', onchange);
 
 var start = function () {
-//  page('/', open('page-home'));
+  page('/', open('page-home'));
   page('/login', open('page-login'));
   page('/models', open('page-schema-list'));
   page('/models/:model', open('page-item-list'));

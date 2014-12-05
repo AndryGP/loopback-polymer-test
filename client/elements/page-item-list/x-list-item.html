@@ -6,13 +6,17 @@
       :host {
         display: block;
       }
+      #name {
+        text-transform: capitalize;
+      }
+
     </style>
 
     <ul>
       <template repeat="{{ property in properties }}">
         <li>
-          <strong>{{ property }}</strong>
-          <span>{{ item[property] }}</span>
+          <strong id="name">{{ property }}</strong>
+          <span id="content">{{ item[property] }}</span>
         </li>
       </template>
       <li>

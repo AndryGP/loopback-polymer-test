@@ -5,8 +5,10 @@
   <template>
 
     <core-ajax auto url="/api/posts" handleAs="json" on-core-response="{{ on_response }}"></core-ajax>
-
+    <a href="/">Back</a>
     <x-blog data="{{ data }}"></x-blog>
+    <a href="/">Back</a>
+
   </template>
 
   <script>

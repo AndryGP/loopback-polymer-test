@@ -14,13 +14,15 @@
     </div>
 
   </template>
+  <script src="../../bower_components/moment/moment.js"></script>
   <script>
     Polymer({
 
       datetime: function (value) {
-        return value;
-      }
 
+        var dateFormat = (moment(value).format('LL'));
+        return dateFormat;
+      }
     });
   </script>
 </polymer-element>

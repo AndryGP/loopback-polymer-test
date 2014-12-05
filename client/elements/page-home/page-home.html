@@ -1,0 +1,47 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="page-home">
+  <template>
+  <style>
+    #welcome {
+      background-image: url('../../images/x-proj.jpg');
+      height: 100%;
+      padding-top: 100px;
+      padding-left: 50px;
+    }
+
+    #brand {
+      text-shadow: 4px 3px 6px #fff;
+    }
+
+    #admin {
+      background-color: transparent;
+      font-size: 20px;
+      margin-right: 20px;
+
+    }
+
+    #blog {
+      background-color: transparent;
+      font-size: 20px;
+      margin-right: 20px;
+    }
+
+  </style>
+  <div id="welcome">
+      <h1 id="brand">WELCOME TO X-PROJECT</h1>
+      <a id="admin" href="/login">ADMIN</a>
+      <a id="blog" href="/blog">BLOG</a>
+    </div>
+  </div>
+
+  </template>
+
+  <script>
+  Polymer('page-home', {
+
+    });
+  </script>
+</polymer-element>
+
+
